@@ -1,4 +1,4 @@
-# Ubuntu 18.04 (Bionic) running Ziproxy
+# Ziproxy is a forwarding (non-caching) compressing HTTP proxy server 
 
 ## Base Docker Image
 Ubuntu 18.04 (x64)
