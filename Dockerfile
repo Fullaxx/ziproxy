@@ -22,7 +22,7 @@ RUN sed -e 's@# Port = 8080@Port = 8080@' \
 -i /etc/ziproxy/ziproxy.conf && mkdir /var/log/ziproxy
 
 # ------------------------------------------------------------------------------
-# Install dockerwait
+# Install startup script with dockerwait
 # https://github.com/Fullaxx/dockerwait
 COPY app.sh dockerwait.static /app/
 
@@ -35,5 +35,5 @@ VOLUME /var/log/ziproxy
 EXPOSE 8080
 
 # ------------------------------------------------------------------------------
-# Define runtime commands
+# Define runtime command
 CMD ["/app/app.sh"]
