@@ -1,4 +1,4 @@
-# Ziproxy (a forwarding compressing HTTP proxy) 
+# Ziproxy (a forwarding compressing HTTP proxy)
 
 ## Base Docker Image
 Ubuntu 18.04 (x64)
