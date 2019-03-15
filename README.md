@@ -1,7 +1,10 @@
-# Ziproxy (a forwarding compressing HTTP proxy)
+# A small docker image running Ziproxy
 
 ## Base Docker Image
-Ubuntu 18.04 (x64)
+[Ubuntu](https://hub.docker.com/_/ubuntu) 18.04 (x64)
+
+## Software
+[Ziproxy](http://ziproxy.sourceforge.net/) - A forwarding (non-caching) compressing HTTP proxy server
 
 ## Get the image from Docker Hub
 ```
