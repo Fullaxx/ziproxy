@@ -6,7 +6,6 @@
 ## Software
 [Ziproxy](http://ziproxy.sourceforge.net/) - A forwarding (non-caching) compressing HTTP proxy server
 
-
 ## Get the image from Docker Hub
 ```
 docker pull fullaxx/ziproxy
