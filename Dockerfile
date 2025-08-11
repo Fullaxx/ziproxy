@@ -1,11 +1,18 @@
 # ------------------------------------------------------------------------------
+# Build dockerwait (https://github.com/Fullaxx/dockerwait)
+FROM alpine AS build
+RUN apk add -U build-base git curl
+RUN git clone https://github.com/Fullaxx/dockerwait && \
+	cd dockerwait && ./compile.sh
+
+# ------------------------------------------------------------------------------
 # Pull base image
 FROM ubuntu:focal
-MAINTAINER Brett Kuskie <fullaxx@gmail.com>
+LABEL author="Brett Kuskie <fullaxx@gmail.com>"
 
 # ------------------------------------------------------------------------------
 # Set environment variables
-ENV DEBIAN_FRONTEND noninteractive
+ENV DEBIAN_FRONTEND=noninteractive
 
 # ------------------------------------------------------------------------------
 # Install ziproxy and clean up
@@ -23,8 +30,8 @@ RUN sed -e 's@# Port = 8080@Port = 8080@' \
 
 # ------------------------------------------------------------------------------
 # Install startup script with dockerwait
-# https://github.com/Fullaxx/dockerwait
-COPY app.sh dockerwait.static /app/
+COPY app.sh /app/
+COPY --from=build /dockerwait/dockerwait.static /app/
 
 # ------------------------------------------------------------------------------
 # Add volumes
