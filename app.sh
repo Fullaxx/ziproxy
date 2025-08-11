@@ -2,4 +2,4 @@
 
 /etc/init.d/ziproxy start
 
-exec /app/dockerwait.static
+exec /app/dockerwait.static.exe

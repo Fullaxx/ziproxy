@@ -31,7 +31,7 @@ RUN sed -e 's@# Port = 8080@Port = 8080@' \
 # ------------------------------------------------------------------------------
 # Install startup script with dockerwait
 COPY app.sh /app/
-COPY --from=build /dockerwait/dockerwait.static /app/
+COPY --from=build /dockerwait/dockerwait.static /app/dockerwait.static.exe
 
 # ------------------------------------------------------------------------------
 # Add volumes
