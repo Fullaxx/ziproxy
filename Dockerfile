@@ -7,7 +7,7 @@ RUN git clone https://github.com/Fullaxx/dockerwait && \
 
 # ------------------------------------------------------------------------------
 # Pull base image
-FROM ubuntu:focal
+FROM ubuntu:jammy
 LABEL author="Brett Kuskie <fullaxx@gmail.com>"
 
 # ------------------------------------------------------------------------------
