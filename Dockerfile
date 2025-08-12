@@ -13,6 +13,7 @@ LABEL author="Brett Kuskie <fullaxx@gmail.com>"
 # ------------------------------------------------------------------------------
 # Set environment variables
 ENV DEBIAN_FRONTEND=noninteractive
+ENV DOCKERWAIT_EXIT_COMMAND="/etc/init.d/ziproxy stop"
 
 # ------------------------------------------------------------------------------
 # Install ziproxy and clean up
